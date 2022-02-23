@@ -903,16 +903,16 @@ def check_validations(
             )
         )
 
-    if (is_json_validation_enabled('maxLength', configuration) and
-            'max_length' in current_validations and
-            len(input_values) > current_validations['max_length']):
-        raise ApiValueError(
-            "Invalid value for `%s`, length must be less than or equal to "
-            "`%s`" % (
-                input_variable_path[0],
-                current_validations['max_length']
-            )
-        )
+    # if (is_json_validation_enabled('maxLength', configuration) and
+    #         'max_length' in current_validations and
+    #         len(input_values) > current_validations['max_length']):
+    #     raise ApiValueError(
+    #         "Invalid value for `%s`, length must be less than or equal to "
+    #         "`%s`" % (
+    #             input_variable_path[0],
+    #             current_validations['max_length']
+    #         )
+    #     )
 
     if (is_json_validation_enabled('minLength', configuration) and
             'min_length' in current_validations and
